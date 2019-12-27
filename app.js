@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
 			lat = position.coords.latitude;
 
 			const proxy = "https://cors-anywhere.herokuapp.com/";
-			const api = `https://api.darksky.net/forecast/9c49a2a83d8303815ab4ff58a644f7e7/${lat},${long}`
+			const api = `${proxy}https://api.darksky.net/forecast/9c49a2a83d8303815ab4ff58a644f7e7/${lat},${long}`
 		
 		fetch(api)
 		.then (response => {
