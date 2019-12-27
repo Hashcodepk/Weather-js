@@ -7,13 +7,8 @@ window.addEventListener("load", () => {
 	let temperatureSection = document.querySelector(".temperature");
 	let temperatureSpan = document.querySelector(".temperature span");
 
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(position => {
-			long = position.coords.longitude;
-			lat = position.coords.latitude;
-
-			const proxy = "https://cors-anywhere.herokuapp.com/";
-			const api = `${proxy}https://api.darksky.net/forecast/9c49a2a83d8303815ab4ff58a644f7e7/${lat},${long}`
+	const proxy = "https://cors-anywhere.herokuapp.com/";
+			const api = `${proxy}https://api.darksky.net/forecast/9c49a2a83d8303815ab4ff58a644f7e7/24.932841,67.030406`
 		
 			fetch(api)
 			.then (response => {
@@ -42,8 +37,6 @@ window.addEventListener("load", () => {
 					}
 				})
 			});
-		});
-	}
 
 	function setIcons(icon, iconID) {
 		const skycons = new Skycons({ color: "white" });
