@@ -24,6 +24,11 @@ body {
 	align-items: center;
 }
 
+
+/*.location canvas {
+	height: 30px;
+}*/
+
 .temperature {
 	flex-direction: column;
 }
